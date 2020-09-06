@@ -1,0 +1,381 @@
+body{
+    font-family: "Nunito", "Kosugi Maru", san-serif;
+    background: #fafafa
+}
+
+a,
+a:hover,
+a:focus{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+hr {
+    border-color: grey;
+    opacity: 0.3;
+    width: 20rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+/******************************************************************************/
+
+
+/* sidebar */
+
+.wrapper{
+    display: flex;
+    text-decoration: none;
+    transition: all 0.5s;
+
+}
+
+
+#sidebar{
+    max-width: 10rem;
+    min-width: 10rem;
+    transition: all 0.5s;
+    font-weight: bold;
+    z-index: 999;
+
+}
+
+.inner-sidebar{
+    position: fixed;
+    max-width: 10rem;
+    min-width: 10rem;
+}
+
+
+.sidebar-header{
+    border-bottom: 1px solid #f5cb5c;
+    
+
+}
+#sidebar.active{
+    margin-left: -10rem;
+
+}
+
+#sidebar ul p{
+    padding: 0 1rem;
+}
+
+#sidebar ul li a{
+    padding: 1rem;
+    display: block;
+}
+
+#sidebar ul li a:hover{
+    color: #495057;
+    background: #f5cb5c;
+}
+
+
+#content{
+    width:100%;
+    min-height: 100vh;
+    transition: all 0.5s;
+}
+
+
+/*************************/
+
+/* Switch*/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #495057;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 26px;
+    left: 4px;
+    bottom: 2.8px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #f5cb5c;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #f5cb5c;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+
+/******************************************************************************/
+
+
+/* navbar */
+
+.menu-btn{
+    border-bottom-right-radius: 110px;
+    border-top-right-radius: 110px;
+    border:none;
+    margin-left: -2rem;
+    background: #343a40;
+    color: #fff;
+    
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+
+
+
+/******************************************************************************/
+
+/* Hero */
+
+.hero{
+  background-image:url(../images/topbanner.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.dark-layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.inner-hero-header{
+  font-family: "Dancing Script", cursive;
+  color: #faedcb;
+  font-size: 8rem;
+}
+
+.inner-hero-text{
+    font-family: "Dancing Script", cursive;
+    color: #faedcb;
+    font-size: 4rem
+  }
+
+
+/******************************************************************************/
+
+/* About Me */
+
+.inner-aboutMe-header {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+  }
+  
+  .inner-aboutMe-text {
+    font-family: "Nunito", sans-serif;
+  }
+  
+  .inner-aboutMe-icon {
+    border-radius: 50%;
+    width: 25rem;
+    height: auto;
+    margin-top: -1rem;
+  }
+  
+/******************************************************************************/
+
+/* My detail */
+
+.myDetail-item{
+    width:30%
+}
+
+.myDetail-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+.each-header{
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    color: #faedcb;
+
+}
+
+.each-detail{
+    border:none;
+}
+
+.myDetail-coding-skill,
+.inner-coding-skill{
+    background: #d66853;
+    border: none;
+}
+
+.skill-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+.myDetail-other-skill,
+.inner-other-skill{
+    background: #94d1be;
+    border: none;
+}
+
+.myDetail-resume,
+.inner-resume{
+    background: #9c89b8;
+    border: none;
+}
+
+.myDetail-myProject,
+.inner-myProject{
+    background: #99582a;
+    border: none;
+}
+
+
+/******************************************************************************/
+
+/* album */
+
+.in_row {
+    padding: 0px;
+  }
+  
+  .each_pic {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .in_row:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+/******************************************************************************/
+
+/* contact me */
+
+.input-group-text,
+.submit-btn{
+    background-color:#faedcb ;
+}
+
+
+/******************************************************************************/
+
+/* footer */
+.footer{
+    background-color:#495057 ;
+}
+
+
+/******************************************************************************/
+
+/* @media */
+
+
+@media screen and (max-width: 500px){
+    .inner-hero-header{
+        font-size: 5rem;
+    }
+      
+    .inner-hero-text{
+        font-size: 3rem
+    }
+
+    .menu-btn{
+       margin-left: -1rem
+    }
+
+    .inner-aboutMe-icon{
+        width: 20rem
+    }
+
+}
+
+@media screen and (max-width: 990px){
+    .menu-btn{
+        margin-left: -1rem
+     }
+
+
+}
+
+
+
+
+

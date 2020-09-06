@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kosugi+Maru&family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="./style/index.css" />
+    <title>Human Improving!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- sidebar -->
+            <nav id="sidebar" class="bg-dark text-white active" >
+                <div class="inner-sidebar">
+                    <div class="sidebar-header p-3 pt-5 bg-dark">
+                        <h3><a href="#hero">Human Improving!</a></h3>
+                    </div>
+                    <ul class="list-unstyled components py-1">
+                        
+                        <!-- switch -->
+                        <div class="text-left switch-text">
+                            <p id="lan1" class="mb-0">English</p>
+                        </div>
+                        <div >
+                            <label class="switch ml-5 mb-0">
+                            <input id="btn" type="checkbox" onclick="click_fun()" />
+                            <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="text-right switch-text">
+                            <p id="lan2" class="mb-0">Japanese</p>
+                        </div>
+                        <!-- switch end -->
+
+                        <li>
+                            <a id="side1" href="#aboutMe"　id="side1">About Me</a>
+                        </li>
+                        <li>
+                            <a id="side2" href="#myDetail" >Information</a>
+                        </li>
+                        <li>
+                            <a id="side3" href="#album" >Album</a>
+                        </li>
+                        <li>
+                            <a id="side4" href="#contactMe" >Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- sidebar end -->
+            <!----content  -->
+            
+            <div id="content">
+                
+                <!----navbar  -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn menu-btn">
+                            <i class="fas fa-align-left"></i>
+
+                        </button>
+                    </div>
+                </nav>
+                <!----navbar end -->
+                <!----Hero  -->
+                <div id="hero" class="hero">
+                    <div class="dark-layer">
+                        <div class="container-fluid text-center p-5 inner-hero">
+                            <h1 id="name" class="inner-hero-header pt-5">Hi! Im Hilman</h1>
+                             <p1 class="inner-hero-text">Welcome to my site</p1>
+                        </div>
+                    </div>
+                </div>
+                <!----Hero end -->
+
+                <!----About Me -->
+                <div class="aboutMe" id="aboutMe">
+                    <div class = "container text-center " >
+                          <div class= "row align-items-center inner-aboutMe">
+                                <div class="col-lg-5">
+                                    <img src="./images/me.jpg" class="inner-aboutMe-icon" alt="" />
+                                </div>
+                                <div class="col-lg-7 p-5">
+                                <h2 class="inner-aboutMe-header">Im Human?</h2>
+                                <hr>
+                                <p2 class="inner-aboutMe-text"
+                                >Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book. It has survived not only
+                                five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with
+                                the release of Letraset sheets cont</p2
+                                >
+                                </div>
+                      </div>
+                    </div>
+                  </div>
+                <!----my detail  -->
+                <div id="myDetail" class="myDetail mt-4">
+                    <div class="container">
+                        <div class>
+                            <div class="d-flex flex-row text-white text-center">
+                              <div class="myDetail-item p-4 myDetail-coding-skill" data-toggle="collapse" data-target="#coding-skills">
+                                <i class="fas fa-tools fa-2x d-block mx-auto"></i>
+                                <span class="d-none d-sm-block">Coding Skills</span>
+                              </div>
+                              <div class="myDetail-item p-4 myDetail-other-skill" data-toggle="collapse" data-target="#other-skills">
+                                <i class="fas fa-toolbox fa-2x d-block mx-auto"></i>
+                                <span class="d-none d-sm-block">Other Skills</span>
+                              </div>
+                              <div class="myDetail-item p-4 myDetail-resume" data-toggle="collapse" data-target="#resume">
+                                <i class="fas fa-file fa-2x d-block mx-auto"></i>
+                                <span class="d-none d-sm-block">Resume</span>
+                              </div>
+                              <div class="myDetail-item p-4 myDetail-myProject" data-toggle="collapse" data-target="#myProject">
+                                <i class="fas fa-project-diagram fa-2x d-block mx-auto"></i>
+                                <span class="d-none d-sm-block">My project</span>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <!----coding skills  -->
+                <div id="coding-skills" class="collapse show">
+                    <div class="card card-body py-4 px-5 inner-coding-skill">
+                      <h2 class="each-header" >My Coding Skills</h2>
+                    </div>
+                    <div class="container">
+                        <div class="card card-body py-5 each-detail">
+                            <div class="row">
+                                <div class=" col-md-6 skill_bar">
+                                    <span class= "skill-text">HTML</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                    </div>
+                                    <span class= "skill-text">CSS</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                    </div>
+                                    <span class= "skill-text">Javascript</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 skill_bar">
+                                    <span class= "skill-text">Bootstrap</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                    </div>
+                                    <span class= "skill-text">Jquery</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 5%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">5</div>
+                                    </div>
+                                  </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                  </div>
+                <!----coding skills end -->
+                <!----other skills -->
+                <div id="other-skills" class="collapse">
+                    <div class="card card-body py-4 px-5 inner-other-skill">
+                      <h2 class="each-header">My Other Skills</h2>
+                    </div>
+                    <div class="container ">
+                        <div class="card card-body py-5 each-detail">
+                            <div class="row">
+                                <div class=" col-md-6 skill_bar">
+                                    <span class= "skill-text">Chinese</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100</div>
+                                    </div>
+                                    <span class= "skill-text">English</span> 
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80</div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 skill_bar">
+                                    <span class= "skill-text">Japanese</span> 
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">90</div>
+                                        </div>
+                                        <span class= "skill-text">Mandarin  </span> 
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
+                                        </div>
+                                  </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                  </div>
+                  <!----other skills end -->
+                  <!----resume -->
+                  <div id="resume" class="collapse">
+                    <div class="card card-body py-4 px-5 inner-resume">
+                      <h2 class="each-header">My Resume</h2>
+                    </div>
+                    <div class="container ">
+                        <div class="card card-body py-5 each-detail">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!----resume end -->
+                  <!----my project -->
+                  <div id="myProject" class="collapse">
+                    <div class="card card-body py-4 px-5 inner-myProject">
+                      <h2 class="each-header">My Project</h2>
+                    </div>
+                    <div class="container ">
+                        <div class="card card-body py-5 each-detail">
+                            <div class="row">
+                                
+                            </div>
+                        
+                        </div>
+                    </div>
+                  </div>
+                  <!----my project end -->
+                <!----my detail end -->
+                <!----album -->
+                <div id="album" class="album">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 in_row" >
+                              <img src="https://source.unsplash.com/random/280x280" class="each_pic">
+                              <div class="overlay">
+                                <div class ="text">
+                                    <p class="pt_text_1">Random</p>
+                                    <p class="pt_text_2">Pic</p>
+                                </div>
+                              </div>
+                
+                            </div>
+                            <div class="col-md-6 col-lg-3 in_row">
+                              <img src="https://source.unsplash.com/random/280x280" class="each_pic">
+                              <div class="overlay">
+                                <div class ="text">
+                                    <p class="pt_text_1">Random</p>
+                                    <p class="pt_text_2">Pic</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 in_row">
+                              <img src="https://source.unsplash.com/random/280x280" class="each_pic">
+                              <div class="overlay">
+                                <div class ="text">
+                                  <p class="pt_text_1">Random</p>
+                                  <p class="pt_text_2">Pic</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 in_row">
+                              <img src="https://source.unsplash.com/random/280x280" class="each_pic">
+                              <div class="overlay">
+                                <div class="text">
+                                    <p class="pt_text_1">Random</p>
+                                    <p class="pt_text_2">Pic</p>
+                                </div> 
+                              </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <!----album end -->
+                <!----contact me -->
+                <div id="contactMe" class="contactMe my-5">
+                  <div class="container">
+                      <div class="row align-items-center">
+                          <div class="col-lg-6">
+                            <h2 class="inner-contactMe-header">Contact Me</h2>
+                            <hr>
+                            <p2 class="inner-contactMe-text"
+                            >Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has survived not only
+                            five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with
+                            the release of Letraset sheets cont</p2
+                            >
+                            <div class="iconList d-flex">
+                                  <div>
+                                    <a href="" class="text-dark">
+                                      <i class="fab fa-linkedin fa-2x m-3"></i>
+                                    </a>
+                                  </div>
+                                  <div>
+                                    <a href="" class="text-dark">
+                                      <i class="fab fa-github fa-2x m-3"></i>
+                                    </a>
+                                  </div>
+                            </div>
+                            </div>
+                              
+
+                          
+                          <div class="col-lg-6">
+                            <div class="card card-body py-5">
+                                <h3>Get In Touch</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos illo, dicta id voluptates enim.</p>
+                                <form>
+                                  <div class="form-group">
+                                    <div class="input-group input-group-lg">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-dark">
+                                          <i class="fas fa-user"></i>
+                                        </span>
+                                      </div>
+                                      <input type="text" class="form-control bg-light text-black" placeholder="Name">
+                                    </div>
+                                  </div>
+                        
+                                  <div class="form-group">
+                                    <div class="input-group input-group-lg">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-dark">
+                                          <i class="fas fa-envelope"></i>
+                                        </span>
+                                      </div>
+                                      <input type="email" class="form-control bg-light text-black" placeholder="Email">
+                                    </div>
+                                  </div>
+                        
+                                  <div class="form-group">
+                                    <div class="input-group input-group-lg">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text text-dark">
+                                          <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                      </div>
+                                      <textarea class="form-control bg-light text-black" placeholder="Comment"></textarea>
+                                    </div>
+                                  </div>
+                        
+                                  <input type="submit" value="Submit" class="btn text-black btn-block btn-lg m-0 submit-btn">
+                                </form>
+                              </div>
+                        </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!----contact me end -->
+                <!----footer -->
+                 <footer class="footer text-muted">
+                     <div class="container text-right text-Muted">
+                         <p>Copyright © 2020 HilmanC. All Rights Reserved</p>
+                     </div>
+                 </footer>
+
+
+                <!----footer end -->
+
+                </div>
+                 <!----content end  -->
+            </div>
+            
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+    
+</body>
+</html>
