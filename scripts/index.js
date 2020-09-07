@@ -34,10 +34,9 @@ function click_fun() {
 
 // sidebar
 $(document).ready(function(){
-  $("#sidebarCollapse").on('click',function(){
+  $("#sidebarCollapse,.sidebar-header,#side1,#side2,#side3,#side4").on('click',function(){
     $("#sidebar, #content").toggleClass('active');
   })
-
 })
 
 /**************************************************** */
@@ -48,5 +47,86 @@ $(document).ready(function(){
 $('.myDetail-item').click(function () {
   $('.collapse').collapse('hide');
 });
+
+// coding skills
+$(".myDetail-coding-skill").on('click',function(){
+  $("#bar-html,#bar-css,#bar-js,#bar-bs,#bar-jq").animate({
+    width: "10%"
+  }, 500);
+})
+
+$(".myDetail-other-skill,.myDetail-resume,.myDetail-myProject").on('click',function(){
+  $("#bar-html,#bar-css,#bar-js,#bar-bs,#bar-jq").animate({
+    width: "0%"
+  }, 100);
+})
+
+// other skills
+
+$(".myDetail-other-skill").on('click',function(){
+  $("#bar-ch").animate({
+    width: "100%"
+  }, 500);
+})
+
+$(".myDetail-other-skill").on('click',function(){
+  $("#bar-eng").animate({
+    width: "80%"
+  }, 500);
+})
+
+$(".myDetail-other-skill").on('click',function(){
+  $("#bar-jap").animate({
+    width: "90%"
+  }, 500);
+})
+
+$(".myDetail-other-skill").on('click',function(){
+  $("#bar-mand").animate({
+    width: "50%"
+  }, 500);
+})
+
+$(".myDetail-coding-skill,.myDetail-resume,.myDetail-myProject").on('click',function(){
+  $("#bar-ch,#bar-eng,#bar-jap,#bar-mand").animate({
+    width: "0%"
+  }, 100);
+})
+
+
+/**************************************************** */
+
+// slideshow
+
+
+var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+
+  },
+  navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
+
+
+
+
 
 

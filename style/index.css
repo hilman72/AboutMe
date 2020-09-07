@@ -1,6 +1,7 @@
 body{
     font-family: "Nunito", "Kosugi Maru", san-serif;
-    background: #fafafa
+    margin:0;
+    padding:0;
 }
 
 a,
@@ -49,6 +50,8 @@ hr {
 }
 
 
+
+
 .sidebar-header{
     border-bottom: 1px solid #f5cb5c;
     
@@ -77,7 +80,7 @@ hr {
 #content{
     width:100%;
     min-height: 100vh;
-    transition: all 0.5s;
+    transition: 0.5s;
 }
 
 
@@ -181,7 +184,7 @@ hr {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100%;
   position: relative;
 }
@@ -193,6 +196,14 @@ hr {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+
+}
+
+.inner-hero{
+  position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
 }
 
 .inner-hero-header{
@@ -252,9 +263,31 @@ hr {
     border:none;
 }
 
+
+
+/* my project */
+
+
+.myDetail-myProject,
+.inner-myProject{
+    background: #d66853;
+    border: none;
+}
+
+.card-img-top{
+  height: 12rem;
+}
+
+
+
+
+/* coding skills */
+
+
+
 .myDetail-coding-skill,
 .inner-coding-skill{
-    background: #d66853;
+    background: #5dd39e;
     border: none;
 }
 
@@ -263,67 +296,79 @@ hr {
     font-weight: bold;
   }
 
+  .progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+
+
+  /* other skills */
+
 .myDetail-other-skill,
 .inner-other-skill{
-    background: #94d1be;
+    background: #7fbeeb ;
     border: none;
 }
+
+
+
+
+/* resume */
+
 
 .myDetail-resume,
 .inner-resume{
-    background: #9c89b8;
+    background:#9c89b8;
     border: none;
 }
 
-.myDetail-myProject,
-.inner-myProject{
-    background: #99582a;
-    border: none;
-}
+
+
 
 
 /******************************************************************************/
 
 /* album */
 
-.in_row {
-    padding: 0px;
-  }
+.album{
+  background-color: silver;
+}
+
+.inner-album{
+  padding:0
+}
+
+.swiper-container {
+  max-width: 59rem;
+  padding-top: 80px;
+  padding-bottom: 100px;
   
-  .each_pic {
-    display: block;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .in_row:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 18rem;
+  height: 18rem;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+  z-index: 1;
+
+}
+
+.swiper-pagination{
+  z-index: 1;
+}
+
+.swiper-pagination-bullet-active{
+  background:#faedcb
+}
+
+
+.swiper-button-next,
+.swiper-button-prev{
+  color:#faedcb
+}
 
 /******************************************************************************/
 
@@ -332,6 +377,7 @@ hr {
 .input-group-text,
 .submit-btn{
     background-color:#faedcb ;
+    
 }
 
 
@@ -343,7 +389,44 @@ hr {
 }
 
 
+
+
 /******************************************************************************/
+
+/* animation */
+
+
+
+:root {
+  --animate-duration: 2000ms;
+  --animate-delay: 1s;
+}
+
+
+
+
+/******************************************************************************/
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 5px;
+  background:silver
+  }
+  ::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background:#495057;
+  }
+
+
+/******************************************************************************/
+
+
 
 /* @media */
 
@@ -367,9 +450,13 @@ hr {
 
 }
 
+
+
+
 @media screen and (max-width: 990px){
     .menu-btn{
-        margin-left: -1rem
+        margin-left: -1rem;
+      
      }
 
 

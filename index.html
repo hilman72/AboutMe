@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<h>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kosugi+Maru&family=Nunito:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
     <link rel="stylesheet" href="./style/index.css" />
@@ -45,7 +50,7 @@
                         <!-- switch end -->
 
                         <li>
-                            <a id="side1" href="#aboutMe"　id="side1">About Me</a>
+                            <a id="side1" href="#aboutMe"　>About Me</a>
                         </li>
                         <li>
                             <a id="side2" href="#myDetail" >Information</a>
@@ -75,10 +80,10 @@
                 </nav>
                 <!----navbar end -->
                 <!----Hero  -->
-                <div id="hero" class="hero">
+                <div id="hero" class="hero ">
                     <div class="dark-layer">
-                        <div class="container-fluid text-center p-5 inner-hero">
-                            <h1 id="name" class="inner-hero-header pt-5">Hi! Im Hilman</h1>
+                        <div class="container-fluid text-center inner-hero">
+                            <h1 id="name" class="inner-hero-header pt-5 ">Hi! Im Hilman</h1>
                              <p1 class="inner-hero-text">Welcome to my site</p1>
                         </div>
                     </div>
@@ -113,6 +118,10 @@
                     <div class="container">
                         <div class>
                             <div class="d-flex flex-row text-white text-center">
+                              <div class="myDetail-item p-4 myDetail-myProject" data-toggle="collapse" data-target="#myProject">
+                                <i class="fas fa-project-diagram fa-2x d-block mx-auto"></i>
+                                <span class="d-none d-sm-block">My project</span>
+                              </div>
                               <div class="myDetail-item p-4 myDetail-coding-skill" data-toggle="collapse" data-target="#coding-skills">
                                 <i class="fas fa-tools fa-2x d-block mx-auto"></i>
                                 <span class="d-none d-sm-block">Coding Skills</span>
@@ -125,16 +134,66 @@
                                 <i class="fas fa-file fa-2x d-block mx-auto"></i>
                                 <span class="d-none d-sm-block">Resume</span>
                               </div>
-                              <div class="myDetail-item p-4 myDetail-myProject" data-toggle="collapse" data-target="#myProject">
-                                <i class="fas fa-project-diagram fa-2x d-block mx-auto"></i>
-                                <span class="d-none d-sm-block">My project</span>
-                              </div>
+                              
                             </div>
                           </div>
                     </div>
                 </div>
+
+                <!----my project -->
+                <div id="myProject" class="collapse show">
+                  <div class="card card-body py-4 px-5 inner-myProject">
+                    <h2 class="each-header">My Project</h2>
+                  </div>
+                  <div class="container">
+                      <div class="card card-body py-5 each-detail">
+                        <div class="row justify-content-center">
+                          <div class="col-lg-4 col-md-6">
+                            <div class="card project-card">
+                              <img class="card-img-top" src="./images/project1.png" alt="Card image cap">
+                              <div class="card-body">
+                                <h3 class="card-title font-weight-bold">Personal Website</h3>
+                                <p class="card-text">A portfolio website to showcase my work.</p>
+                                <p class="card-text text-muted">Skills Used: Bootstrap4, Javascript, Jquery  </p>
+                              </div>
+                              <div class="card-footer">
+                                <small class="text-muted">Last updated 7/9/2020</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="card project-card">
+                              <img class="card-img-top" src="./images/comingsoon.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <h3 class="card-title font-weight-bold">Coming Soon!!!</h3>
+                                <p class="card-text">    </p>
+                                <P>   </P>
+                              </div>
+                              <div class="card-footer">
+                                <small class="text-muted">   </small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="card project-card">
+                              <img class="card-img-top" src="./images/comingsoon.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <h3 class="card-title font-weight-bold">Coming Soon!!!</h3>
+                                <p class="card-text"> </p>
+                                
+                              </div>
+                              <div class="card-footer">
+                                <small class="text-muted">  </small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+                <!----my project end -->
                 <!----coding skills  -->
-                <div id="coding-skills" class="collapse show">
+                <div id="coding-skills" class="collapse ">
                     <div class="card card-body py-4 px-5 inner-coding-skill">
                       <h2 class="each-header" >My Coding Skills</h2>
                     </div>
@@ -144,25 +203,25 @@
                                 <div class=" col-md-6 skill_bar">
                                     <span class= "skill-text">HTML</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                      <div id="bar-html"class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
                                     </div>
                                     <span class= "skill-text">CSS</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                      <div id="bar-css" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
                                     </div>
                                     <span class= "skill-text">Javascript</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                      <div id="bar-js" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
                                     </div>
                                   </div>
                                   <div class="col-md-6 skill_bar">
                                     <span class= "skill-text">Bootstrap</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
+                                      <div id="bar-bs" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
                                     </div>
                                     <span class= "skill-text">Jquery</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 5%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">5</div>
+                                      <div id="bar-jq" class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10</div>
                                     </div>
                                   </div>
                             </div>
@@ -182,21 +241,21 @@
                                 <div class=" col-md-6 skill_bar">
                                     <span class= "skill-text">Chinese</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100</div>
+                                      <div id="bar-ch" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100</div>
                                     </div>
                                     <span class= "skill-text">English</span> 
                                     <div class="progress mb-3">
-                                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80</div>
+                                      <div id="bar-eng" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80</div>
                                     </div>
                                   </div>
                                   <div class="col-md-6 skill_bar">
                                     <span class= "skill-text">Japanese</span> 
                                         <div class="progress mb-3">
-                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">90</div>
+                                            <div id="bar-jap" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">90</div>
                                         </div>
-                                        <span class= "skill-text">Mandarin  </span> 
+                                        <span class= "skill-text">Mandarin</span> 
                                         <div class="progress mb-3">
-                                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
+                                            <div id="bar-mand" class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
                                         </div>
                                   </div>
                             </div>
@@ -212,70 +271,138 @@
                     </div>
                     <div class="container ">
                         <div class="card card-body py-5 each-detail">
-                            <div class="row">
+                          <div class="text-center">
+                            <h3 class="font-weight-bold">Working Experience</h3>
+                            <hr>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                <div class="card-body">
+                                  
+                                  <h3></h3>
                                 
+                                  <p></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                <div class="card-body">
+                                  
+                                  <h3></h3>
+                                
+                                  <p></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                <div class="card-body">
+                                  
+                                  <h3></h3>
+                                
+                                  <p></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                <div class="card-body">
+                                  <h3></h3>
+                                  <p></p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                            <div class="text-center">
+                              <h3 class="font-weight-bold">Education</h3>
+                              <hr>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                  <div class="card-body">
+                                    
+                                    <h3></h3>
+                                  
+                                    <p></p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                      
+                              <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                  <div class="card-body">
+                                    
+                                    <h3></h3>
+                                  
+                                    <p></p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                      
+                              <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                  <div class="card-body">
+                                    
+                                    <h3></h3>
+                                  
+                                    <p></p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                      
+                              <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <h3></h3>
+                                    <p></p>
+                                    
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                         </div>
                     </div>
                   </div>
                   <!----resume end -->
-                  <!----my project -->
-                  <div id="myProject" class="collapse">
-                    <div class="card card-body py-4 px-5 inner-myProject">
-                      <h2 class="each-header">My Project</h2>
-                    </div>
-                    <div class="container ">
-                        <div class="card card-body py-5 each-detail">
-                            <div class="row">
-                                
-                            </div>
-                        
-                        </div>
-                    </div>
-                  </div>
-                  <!----my project end -->
+                  
                 <!----my detail end -->
                 <!----album -->
                 <div id="album" class="album">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3 in_row" >
-                              <img src="https://source.unsplash.com/random/500x300" class="each_pic">
-                              <div class="overlay">
-                                <div class ="text">
-                                  <p class="pt_text_1">Random Pic</p>
-                                  <p class="pt_text_2">from unsplash</p>
-                                </div>
-                              </div>
-                
-                            </div>
-                            <div class="col-md-6 col-lg-3 in_row">
-                              <img src="https://source.unsplash.com/random/500x300" class="each_pic">
-                              <div class="overlay">
-                                <div class ="text">
-                                    <p class="pt_text_1">Random Pic</p>
-                                    <p class="pt_text_2">from unsplash</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 in_row">
-                              <img src="https://source.unsplash.com/random/500x300" class="each_pic">
-                              <div class="overlay">
-                                <div class ="text">
-                                  <p class="pt_text_1">Random Pic</p>
-                                    <p class="pt_text_2">from unsplash</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 in_row">
-                              <img src="https://source.unsplash.com/random/500x300" class="each_pic">
-                              <div class="overlay">
-                                <div class="text">
-                                  <p class="pt_text_1">Random Pic</p>
-                                  <p class="pt_text_2">from unsplash</p>
-                                </div> 
-                              </div>
-                            </div>
-                        </div>
+                  <div class="container inner-album">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" style="background-image:url(./images/food2.JPG)"></div>
+                      <div class="swiper-slide" style="background-image:url(./images/trv1.JPG)"></div>
+                      <div class="swiper-slide" style="background-image:url(./images/food4.JPG)"></div>
+                      <div class="swiper-slide" style="background-image:url(./images/trv2.JPG)"></div>
+                      <div class="swiper-slide" style="background-image:url(./images/food5.JPG)"></div>
+                      <div class="swiper-slide" style="background-image:url(./images/trv3.JPG)"></div>
+                      
+                      
+                                
+                     
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
+                  
+                </div>
+              </div>
                 </div>
 
 
@@ -285,7 +412,7 @@
                   <div class="container">
                       <div class="row align-items-center">
                           <div class="col-lg-6">
-                            <h2 class="inner-contactMe-header">Contact Me</h2>
+                            <h2 class="inner-contactMe-header font-weight-bold">Contact Me</h2>
                             <hr>
                             <p2 class="inner-contactMe-text"
                             >Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -313,14 +440,17 @@
 
                           
                           <div class="col-lg-6">
-                            <div class="card card-body py-5">
-                                <h3>Get In Touch</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos illo, dicta id voluptates enim.</p>
+                            <div class="card card-body py-4">
+                                <h2 class="py-1 font-weight-bold">Get In Touch</h2>
+                                <p>Feel Free To Give Your Comments</p>
+                                
+
+                                <!----form -->
                                 <form action="https://formspree.io/xbjznyrv" method="POST">
                                   <div class="form-group">
                                     <div class="input-group input-group-lg">
                                       <div class="input-group-prepend">
-                                        <span class="input-group-text text-dark">
+                                        <span class="input-group-text bg-dark text-light">
                                           <i class="fas fa-user"></i>
                                         </span>
                                       </div>
@@ -331,7 +461,7 @@
                                   <div class="form-group">
                                     <div class="input-group input-group-lg">
                                       <div class="input-group-prepend">
-                                        <span class="input-group-text text-dark">
+                                        <span class="input-group-text bg-dark text-light">
                                           <i class="fas fa-envelope"></i>
                                         </span>
                                       </div>
@@ -342,16 +472,17 @@
                                   <div class="form-group">
                                     <div class="input-group input-group-lg">
                                       <div class="input-group-prepend">
-                                        <span class="input-group-text text-dark">
+                                        <span class="input-group-text bg-dark text-light">
                                           <i class="fas fa-pencil-alt"></i>
                                         </span>
                                       </div>
-                                      <textarea class="form-control bg-light text-black" name="message" placeholder="Comment"></textarea>
+                                      <textarea class="form-control text-dark" name="message" placeholder="Comment"></textarea>
                                     </div>
                                   </div>
                         
-                                  <input type="submit" value="Submit" class="btn text-black btn-block btn-lg m-0 submit-btn">
+                                  <input type="submit" value="Submit" class="btn bg-dark text-light btn-block btn-lg m-0 submit-btn">
                                 </form>
+                                <!----form end -->
                               </div>
                         </div>
                         </div>
@@ -364,8 +495,6 @@
                          <p>Copyright © 2020 HilmanC. All Rights Reserved</p>
                      </div>
                  </footer>
-
-
                 <!----footer end -->
 
                 </div>
@@ -398,6 +527,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="./scripts/index.js"></script>
     
 </body>
