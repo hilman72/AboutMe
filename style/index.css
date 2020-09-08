@@ -252,8 +252,12 @@ input:checked + .slider:before {
   height: 12rem;
 }
 
-.project-card {
+.project-card:hover {
   box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.75);
+}
+
+.card-text {
+  font-size: 1rem;
 }
 
 /* coding skills */
@@ -357,8 +361,8 @@ input:checked + .slider:before {
 }
 
 .collapsing {
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 /******************************************************************************/
