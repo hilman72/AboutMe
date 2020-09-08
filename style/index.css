@@ -348,9 +348,22 @@ input:checked + .slider:before {
 
 /* footer */
 .footer {
-  background-color: #495057;
+  background-color: #343a40;
+  z-index: 10;
 }
 
+.to-top-btn {
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border: none;
+  margin-right: -2rem;
+  background: #343a40;
+  color: #fff;
+}
+
+.to-top-nav {
+  padding: 0;
+}
 /******************************************************************************/
 
 /* animation */
