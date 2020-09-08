@@ -353,7 +353,12 @@ input:checked + .slider:before {
 
 :root {
   --animate-duration: 1000ms;
-  --animate-delay: 0.5s;
+  --animate-delay: 0.1s;
+}
+
+.collapsing {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 /******************************************************************************/

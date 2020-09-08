@@ -15,8 +15,8 @@ function click_fun() {
     jp: {
       lan1: "英語",
       lan2: "日本語",
-      side1: "私について",
-      side2: "私の資料",
+      side1: "人間？？",
+      side2: "人間？研究",
       side3: "写真",
       side4: "連絡先",
     },
@@ -50,7 +50,31 @@ $(".myDetail-item").click(function () {
   $(".collapse").collapse("hide");
 });
 
-$(".myDetail-myProject").hover(function () {
+$(".pj1-pic")
+  .mouseenter(function () {
+    $("#pj1").collapse("show");
+  })
+  .mouseleave(function () {
+    $("#pj1").collapse("hide");
+  });
+
+$(".pj2-pic")
+  .mouseenter(function () {
+    $("#pj2").collapse("show");
+  })
+  .mouseleave(function () {
+    $("#pj2").collapse("hide");
+  });
+
+$(".pj3-pic")
+  .mouseenter(function () {
+    $("#pj3").collapse("show");
+  })
+  .mouseleave(function () {
+    $("#pj3").collapse("hide");
+  });
+
+$(".myDetail-myProject").mouseenter(function () {
   $(".fa-project-diagram").addClass("animate__bounce");
 });
 $(".myDetail-myProject").bind(
@@ -60,7 +84,7 @@ $(".myDetail-myProject").bind(
   }
 );
 
-$(".myDetail-coding-skill").hover(function () {
+$(".myDetail-coding-skill").mouseenter(function () {
   $(".fa-tools").addClass("animate__bounce");
 });
 $(".myDetail-coding-skill").bind(
@@ -70,7 +94,7 @@ $(".myDetail-coding-skill").bind(
   }
 );
 
-$(".myDetail-other-skill").hover(function () {
+$(".myDetail-other-skill").mouseenter(function () {
   $(".fa-toolbox").addClass("animate__bounce");
 });
 $(".myDetail-other-skill").bind(
@@ -80,7 +104,7 @@ $(".myDetail-other-skill").bind(
   }
 );
 
-$(".myDetail-resume").hover(function () {
+$(".myDetail-resume").mouseenter(function () {
   $(".fa-file").addClass("animate__bounce");
 });
 $(".myDetail-resume").bind(
