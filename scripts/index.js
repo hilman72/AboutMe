@@ -42,7 +42,20 @@ $(document).ready(function () {
   );
 });
 
+
+
+
+
 /**************************************************** */
+
+
+// about me
+
+
+
+
+/**************************************************** */
+
 
 // my detail
 $(document).ready(function () {
@@ -50,29 +63,7 @@ $(document).ready(function () {
     $(".collapse").collapse("hide");
   });
 
-  $(".pj1-pic")
-    .mouseenter(function () {
-      $("#pj1").collapse("show");
-    })
-    .mouseleave(function () {
-      $("#pj1").collapse("hide");
-    });
-
-  $(".pj2-pic")
-    .mouseenter(function () {
-      $("#pj2").collapse("show");
-    })
-    .mouseleave(function () {
-      $("#pj2").collapse("hide");
-    });
-
-  $(".pj3-pic")
-    .mouseenter(function () {
-      $("#pj3").collapse("show");
-    })
-    .mouseleave(function () {
-      $("#pj3").collapse("hide");
-    });
+  
 
   $(".myDetail-myProject").mouseenter(function () {
     $(".fa-project-diagram").addClass("animate__bounce");
@@ -113,6 +104,33 @@ $(document).ready(function () {
       $(".fa-file").removeClass("animate__bounce");
     }
   );
+ // my project
+   
+ $(".pj1-pic")
+ .mouseenter(function () {
+   $("#pj1").collapse("show");
+ })
+ .mouseleave(function () {
+   $("#pj1").collapse("hide");
+ });
+
+$(".pj2-pic")
+ .mouseenter(function () {
+   $("#pj2").collapse("show");
+ })
+ .mouseleave(function () {
+   $("#pj2").collapse("hide");
+ });
+
+$(".pj3-pic")
+ .mouseenter(function () {
+   $("#pj3").collapse("show");
+ })
+ .mouseleave(function () {
+   $("#pj3").collapse("hide");
+ });
+
+
   // coding skills
   $(".myDetail-coding-skill").on("click", function () {
     $("#bar-html,#bar-css,#bar-js,#bar-bs,#bar-jq").animate(

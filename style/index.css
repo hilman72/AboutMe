@@ -333,7 +333,16 @@ input:checked + .slider:before {
 .swiper-button-next,
 .swiper-button-prev {
   color: #faedcb;
+  
 }
+
+
+
+
+
+
+
+
 
 /******************************************************************************/
 
@@ -342,6 +351,56 @@ input:checked + .slider:before {
 .input-group-text,
 .submit-btn {
   background-color: #faedcb;
+}
+
+
+#icon-btn{
+  max-width: 5rem;
+  -webkit-transition: max-width 0.8s;
+  transition: max-width 0.8s;
+  padding: 2 2 2 0px;
+  border-radius: 30px;
+  display: flex;
+  background-color:transparent;
+  overflow: hidden;
+  font-family: "Dancing Script", cursive;
+  color: #faedcb;
+  font-size: 1.3rem;
+  border:none;
+}
+
+.icon-name{
+  max-width: 0;
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+#icon-btn:hover{
+  max-width: 11rem;
+  background-color:#343a40;
+}
+
+#icon-btn:hover .icon-name{
+  max-width: 9rem
+}
+
+.fa-linkedin,
+.fa-github,
+.fa-instagram,
+.fa-envelope{
+  color:#343a40
+}
+
+#icon-btn:hover .fa-linkedin,
+#icon-btn:hover .fa-github,
+#icon-btn:hover .fa-instagram,
+#icon-btn:hover .fa-envelope{
+  color:#faedcb
 }
 
 /******************************************************************************/
