@@ -45,146 +45,146 @@ $(document).ready(function () {
 /**************************************************** */
 
 // my detail
-
-$(".myDetail-item").click(function () {
-  $(".collapse").collapse("hide");
-});
-
-$(".pj1-pic")
-  .mouseenter(function () {
-    $("#pj1").collapse("show");
-  })
-  .mouseleave(function () {
-    $("#pj1").collapse("hide");
+$(document).ready(function () {
+  $(".myDetail-item").click(function () {
+    $(".collapse").collapse("hide");
   });
 
-$(".pj2-pic")
-  .mouseenter(function () {
-    $("#pj2").collapse("show");
-  })
-  .mouseleave(function () {
-    $("#pj2").collapse("hide");
+  $(".pj1-pic")
+    .mouseenter(function () {
+      $("#pj1").collapse("show");
+    })
+    .mouseleave(function () {
+      $("#pj1").collapse("hide");
+    });
+
+  $(".pj2-pic")
+    .mouseenter(function () {
+      $("#pj2").collapse("show");
+    })
+    .mouseleave(function () {
+      $("#pj2").collapse("hide");
+    });
+
+  $(".pj3-pic")
+    .mouseenter(function () {
+      $("#pj3").collapse("show");
+    })
+    .mouseleave(function () {
+      $("#pj3").collapse("hide");
+    });
+
+  $(".myDetail-myProject").mouseenter(function () {
+    $(".fa-project-diagram").addClass("animate__bounce");
   });
-
-$(".pj3-pic")
-  .mouseenter(function () {
-    $("#pj3").collapse("show");
-  })
-  .mouseleave(function () {
-    $("#pj3").collapse("hide");
-  });
-
-$(".myDetail-myProject").mouseenter(function () {
-  $(".fa-project-diagram").addClass("animate__bounce");
-});
-$(".myDetail-myProject").bind(
-  "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-  function () {
-    $(".fa-project-diagram").removeClass("animate__bounce");
-  }
-);
-
-$(".myDetail-coding-skill").mouseenter(function () {
-  $(".fa-tools").addClass("animate__bounce");
-});
-$(".myDetail-coding-skill").bind(
-  "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-  function () {
-    $(".fa-tools").removeClass("animate__bounce");
-  }
-);
-
-$(".myDetail-other-skill").mouseenter(function () {
-  $(".fa-toolbox").addClass("animate__bounce");
-});
-$(".myDetail-other-skill").bind(
-  "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-  function () {
-    $(".fa-toolbox").removeClass("animate__bounce");
-  }
-);
-
-$(".myDetail-resume").mouseenter(function () {
-  $(".fa-file").addClass("animate__bounce");
-});
-$(".myDetail-resume").bind(
-  "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-  function () {
-    $(".fa-file").removeClass("animate__bounce");
-  }
-);
-// coding skills
-$(".myDetail-coding-skill").on("click", function () {
-  $("#bar-html,#bar-css,#bar-js,#bar-bs,#bar-jq").animate(
-    {
-      width: "10%",
-    },
-    500
+  $(".myDetail-myProject").bind(
+    "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+    function () {
+      $(".fa-project-diagram").removeClass("animate__bounce");
+    }
   );
-});
 
-$(".myDetail-other-skill,.myDetail-resume,.myDetail-myProject").on(
-  "click",
-  function () {
+  $(".myDetail-coding-skill").mouseenter(function () {
+    $(".fa-tools").addClass("animate__bounce");
+  });
+  $(".myDetail-coding-skill").bind(
+    "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+    function () {
+      $(".fa-tools").removeClass("animate__bounce");
+    }
+  );
+
+  $(".myDetail-other-skill").mouseenter(function () {
+    $(".fa-toolbox").addClass("animate__bounce");
+  });
+  $(".myDetail-other-skill").bind(
+    "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+    function () {
+      $(".fa-toolbox").removeClass("animate__bounce");
+    }
+  );
+
+  $(".myDetail-resume").mouseenter(function () {
+    $(".fa-file").addClass("animate__bounce");
+  });
+  $(".myDetail-resume").bind(
+    "webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+    function () {
+      $(".fa-file").removeClass("animate__bounce");
+    }
+  );
+  // coding skills
+  $(".myDetail-coding-skill").on("click", function () {
     $("#bar-html,#bar-css,#bar-js,#bar-bs,#bar-jq").animate(
       {
-        width: "0%",
+        width: "10%",
       },
-      100
+      500
     );
-  }
-);
+  });
 
-// other skills
-
-$(".myDetail-other-skill").on("click", function () {
-  $("#bar-ch").animate(
-    {
-      width: "100%",
-    },
-    500
+  $(".myDetail-other-skill,.myDetail-resume,.myDetail-myProject").on(
+    "click",
+    function () {
+      $("#bar-html,#bar-css,#bar-js,#bar-bs,#bar-jq").animate(
+        {
+          width: "0%",
+        },
+        100
+      );
+    }
   );
-});
 
-$(".myDetail-other-skill").on("click", function () {
-  $("#bar-eng").animate(
-    {
-      width: "80%",
-    },
-    500
-  );
-});
+  // other skills
 
-$(".myDetail-other-skill").on("click", function () {
-  $("#bar-jap").animate(
-    {
-      width: "90%",
-    },
-    500
-  );
-});
-
-$(".myDetail-other-skill").on("click", function () {
-  $("#bar-mand").animate(
-    {
-      width: "50%",
-    },
-    500
-  );
-});
-
-$(".myDetail-coding-skill,.myDetail-resume,.myDetail-myProject").on(
-  "click",
-  function () {
-    $("#bar-ch,#bar-eng,#bar-jap,#bar-mand").animate(
+  $(".myDetail-other-skill").on("click", function () {
+    $("#bar-ch").animate(
       {
-        width: "0%",
+        width: "100%",
       },
-      100
+      500
     );
-  }
-);
+  });
 
+  $(".myDetail-other-skill").on("click", function () {
+    $("#bar-eng").animate(
+      {
+        width: "80%",
+      },
+      500
+    );
+  });
+
+  $(".myDetail-other-skill").on("click", function () {
+    $("#bar-jap").animate(
+      {
+        width: "90%",
+      },
+      500
+    );
+  });
+
+  $(".myDetail-other-skill").on("click", function () {
+    $("#bar-mand").animate(
+      {
+        width: "50%",
+      },
+      500
+    );
+  });
+
+  $(".myDetail-coding-skill,.myDetail-resume,.myDetail-myProject").on(
+    "click",
+    function () {
+      $("#bar-ch,#bar-eng,#bar-jap,#bar-mand").animate(
+        {
+          width: "0%",
+        },
+        100
+      );
+    }
+  );
+});
 /**************************************************** */
 
 // slideshow
